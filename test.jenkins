@@ -21,5 +21,15 @@ pipeline {
                 sh 'ssh root@ub1 \'uptime\''
             }
         }
+        stage("third step") {
+            steps {
+                sh 'ssh root@ub2 \'hostname\''
+            }
+        }
+        stage("four step") {
+            steps {
+                sh 'ssh root@ub2 \'uptime\''
+            }
+        }
     }
 }
